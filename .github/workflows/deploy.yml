@@ -8,13 +8,14 @@ on:
 
 jobs:
   publish:
+    steps:
+      - name: Echo
+        run: |
+          echo "Hello World"
     # - uses: actions/checkout@v2
     # - uses: oleksiyrudenko/gha-git-credentials@v2.1.1
     #   with:
     #     token: '${{ secrets.GH_PAT }}'
-    - name: Echo
-      run: |
-        echo "Hello World"
     # - run: |
     #     git checkout deploy
     #     git checkout main posts
