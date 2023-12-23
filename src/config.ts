@@ -4,7 +4,7 @@ export const SITE: Site = {
   website: "https://JakeNHelfrich.github.io",
   author: "Jake Helfrich",
   desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
-  title: "Blog",
+  title: "Jake's Blog",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 3,
