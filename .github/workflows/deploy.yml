@@ -14,9 +14,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: oleksiyrudenko/gha-git-credentials@v2.1.1
         with:
-          token: '${{ secrets.GH_PAT }}'
+          token: '${{ secrets.GITHUB_TOKEN }}'
       - run: |
-          echo "${{ secrets.GH_PAT }}"
           git fetch origin
           git checkout deploy
           git checkout main posts
