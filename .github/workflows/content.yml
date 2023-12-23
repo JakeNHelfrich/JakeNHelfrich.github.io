@@ -1,0 +1,29 @@
+name: Deploy Content 
+
+on:
+  push:
+    branches: [ main ]
+  # Allows you to run this workflow manually from the Actions tab on GitHub.
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  publish:
+    name: Publish blog content to website
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: oleksiyrudenko/gha-git-credentials@v2.1.1
+        with:
+          token: '${{ secrets.GITHUB_TOKEN }}'
+      - run: |
+          git fetch origin
+          git checkout deploy
+          git checkout main posts
+          mv posts/* src/content/blog
+          git add .
+          git commit -m "Updated posts"
+          git push
