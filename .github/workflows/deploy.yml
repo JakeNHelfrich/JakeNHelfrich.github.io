@@ -16,7 +16,7 @@ jobs:
         with:
           token: '${{ secrets.GH_PAT }}'
       - run: |
-          echo "${{ secrets.GH_PAT }}""
+          echo "${{ secrets.GH_PAT }}"
           git fetch origin
           git checkout deploy
           git checkout main posts
