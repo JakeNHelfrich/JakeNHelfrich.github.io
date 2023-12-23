@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy Content 
 
 on:
   push:
@@ -13,9 +13,9 @@ jobs:
       with:
         token: '${{ secrets.GH_PAT }}'
     - run: |
-      git checkout deploy
-      git checkout main posts
-      mv posts/* src/content/blog
-      git add .
-      git commit -m "Updated posts"
-      git push
+        git checkout deploy
+        git checkout main posts
+        mv posts/* src/content/blog
+        git add .
+        git commit -m "Updated posts"
+        git push
