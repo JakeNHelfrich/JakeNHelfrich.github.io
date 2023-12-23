@@ -8,14 +8,14 @@ on:
 
 jobs:
   publish-content:
-      - uses: actions/checkout@v2
-      - uses: oleksiyrudenko/gha-git-credentials@v2.1.1
-        with:
-          token: '${{ secrets.GH_PAT }}'
-      - run: |
-          git checkout deploy
-          git checkout main posts
-          mv posts/* src/content/blog
-          git add .
-          git commit -m "Updated posts"
-          git push
+    - uses: actions/checkout@v2
+    - uses: oleksiyrudenko/gha-git-credentials@v2.1.1
+      with:
+        token: '${{ secrets.GH_PAT }}'
+    - run: |
+        git checkout deploy
+        git checkout main posts
+        mv posts/* src/content/blog
+        git add .
+        git commit -m "Updated posts"
+        git push
