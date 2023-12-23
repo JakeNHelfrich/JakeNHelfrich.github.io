@@ -16,7 +16,7 @@ jobs:
         with:
           token: '${{ secrets.GH_PAT }}'
       - run: |
-          git fetch origin deploy
+          git fetch origin
           git checkout deploy
           git checkout main posts
           mv posts/* src/content/blog
