@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  publish-content:
+  publish:
     # - uses: actions/checkout@v2
     # - uses: oleksiyrudenko/gha-git-credentials@v2.1.1
     #   with:
