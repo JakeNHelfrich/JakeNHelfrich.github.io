@@ -15,12 +15,11 @@ jobs:
       - uses: oleksiyrudenko/gha-git-credentials@v2.1.1
         with:
           token: '${{ secrets.GH_PAT }}'
-      - run: |
+        run: |
           git fetch origin
           git checkout deploy
           git checkout main posts
           mv posts/* src/content/blog
           git add .
-          git status
           git commit -m "Updated posts"
           git push
