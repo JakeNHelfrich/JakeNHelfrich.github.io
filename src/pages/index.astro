@@ -22,28 +22,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 <Layout>
   <Header />
   <main id="main-content">
-    {
-      featuredPosts.length > 0 && (
-        <>
-          <section id="featured">
-            <h2>Featured</h2>
-            <ul>
-              {featuredPosts.map(({ data }) => (
-                <Card
-                  href={`/posts/${slugify(data)}`}
-                  frontmatter={data}
-                  secHeading={false}
-                />
-              ))}
-            </ul>
-          </section>
-          <Hr />
-        </>
-      )
-    }
-
-    <section id="recent-posts">
-      <h2>Recent Posts</h2>
+    <section id="posts">
       <ul>
         {
           sortedPosts
@@ -100,13 +79,11 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
   }
 
-  /* ===== Featured & Recent Posts Sections ===== */
-  #featured,
-  #recent-posts {
+  /* =====  Posts Sections ===== */
+  #posts {
     @apply pb-6 pt-12;
   }
-  #featured h2,
-  #recent-posts h2 {
+  #posts h2 {
     @apply text-2xl font-semibold tracking-wide;
   }
   .all-posts-btn-wrapper {
