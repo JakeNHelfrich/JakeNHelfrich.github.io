@@ -22,8 +22,9 @@ jobs:
       - run: |
           git fetch origin
           git checkout deploy
-          git checkout main posts
+          git checkout main posts && git checkout main assets
           mv posts/* src/content/blog
+          mv assets/* public/assets
           git add .
           git commit -m "Updated posts"
           git push
