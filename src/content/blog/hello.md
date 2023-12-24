@@ -1,14 +1,9 @@
 ---
 author: Jake Helfrich
-pubDatetime: 2023-01-30T15:57:52.737Z
-title: Place Holder
+pubDatetime: 2023-12-24
+title: Welcome
 featured: false
-ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
-tags:
-  - release
-description: deez
+description: A welcome message to this blog site.
 ---
 
-# Hello World!
-
-Hello World!!
+I welcome you to my little slice of the internet!
