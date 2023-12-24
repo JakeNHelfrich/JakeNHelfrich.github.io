@@ -2,7 +2,6 @@
 author: Jake Helfrich
 pubDatetime: 2023-12-24T10:00:00Z
 title: Welcome
-featured: false
 description: A welcome message to this blog site.
 ---
 
